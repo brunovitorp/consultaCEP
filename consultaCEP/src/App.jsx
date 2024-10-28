@@ -5,9 +5,27 @@
   function App() {
     const endPoint = `https://viacep.com.br/ws/`;
     const endCEP = `http://localhost:3000/cep`
+    // const acesso = `Ob6WAUMljLmZP7tO62HQhDGee4bGTIQytbBilWUu`
     const [cepData, setCepData] = useState({});
     const [inputCep, setInputCep] = useState(""); // variável para capturar o valor do input
     const [cep, setCEP] = useState([])
+
+    // const consultaCEPToken = async ()=>{
+    //   try{
+
+    //     const response = await axios.get(endPoint, {
+    //         headers:{
+    //           'Authorization': `Bearer ${acesso}`
+    //         }
+    //     })
+    //      <aqui um state para armazenar os dados  do usuário>
+    //     console.log("acesso ok", response.data)
+
+    //   }catch(error){
+    //     console.log('erro',error)
+    //   }
+    // }
+
 
     const buscaCEP = async () => {
       try {
